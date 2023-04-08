@@ -53,16 +53,16 @@ struct MyChildStruct: MyChildProtocol {
 
 // MARK: - Struct
 struct MyConcreteStruct {
-    var uidString = UUID().uuidString
-    var int: Int = 1
-    var double: Double = 1.5
-    var timeInterval: TimeInterval = 1
-    var string = "string"
-    var data: Data = UUID().uuidString.data(using: .utf8)!
-    var optionalInt: Int?
-    var optionalString: String?
-    var dateConstant: Date = Date(timeIntervalSince1970: 0)
-    var dateNow: Date = Date()
+    var uidString: String = MyObject.uidString
+    var int: Int = MyObject.int
+    var double: Double = MyObject.double
+    var timeInterval: TimeInterval = MyObject.timeInterval
+    var string: String = MyObject.string
+    var data: Data = MyObject.data
+    var optionalInt: Int? = MyObject.optionalInt
+    var optionalString: String? = MyObject.optionalString
+    var dateConstant: Date = MyObject.dateConstant
+    var dateNow: Date = MyObject.dateNow
     var error: NSError { NSError(domain: string, code: int) }
 }
 struct MyCodableHashableStruct<T: Codable&Hashable>: Codable, Hashable {
@@ -71,17 +71,39 @@ struct MyCodableHashableStruct<T: Codable&Hashable>: Codable, Hashable {
 
 // MARK: - Object
 class MyObject: Codable, Hashable, Comparable {
-    var uidString = UUID().uuidString
-    var int: Int = 1
-    var double: Double = 1.5
-    var timeInterval: TimeInterval = 1
-    var string = "string"
-    var data: Data = UUID().uuidString.data(using: .utf8)!
+    var uidString: String
+    var int: Int
+    var double: Double
+    var timeInterval: TimeInterval
+    var string: String
+    var data: Data
     var optionalInt: Int?
     var optionalString: String?
-    var dateConstant: Date = Date(timeIntervalSince1970: 0)
-    var dateNow: Date = Date()
+    var dateConstant: Date
+    var dateNow: Date
     var error: NSError { NSError(domain: string, code: int) }
+    
+    init(uidString: String = MyObject.uidString,
+         int: Int = MyObject.int,
+         double: Double = MyObject.double,
+         timeInterval: TimeInterval = MyObject.timeInterval,
+         string: String = MyObject.string,
+         data: Data = MyObject.data,
+         optionalInt: Int? = MyObject.optionalInt,
+         optionalString: String? = MyObject.optionalString,
+         dateConstant: Date = MyObject.dateConstant,
+         dateNow: Date = MyObject.dateNow) {
+        self.uidString = uidString
+        self.int = int
+        self.double = double
+        self.timeInterval = timeInterval
+        self.string = string
+        self.data = data
+        self.optionalInt = optionalInt
+        self.optionalString = optionalString
+        self.dateConstant = dateConstant
+        self.dateNow = dateNow
+    }
     
     // Equatable
     static func == (lhs: MyObject, rhs: MyObject) -> Bool {
@@ -170,4 +192,18 @@ enum MyEnum: Codable, Hashable, Comparable, CaseIterable {
             .withIntAndString(int: 3, string: "three")
         ]
     }
+}
+
+extension MyObject {
+    static var uidString = UUID().uuidString
+    static var int: Int = 1
+    static var double: Double = 1.5
+    static var timeInterval: TimeInterval = 1
+    static var string = "string"
+    static var data: Data = UUID().uuidString.data(using: .utf8)!
+    static var optionalInt: Int?
+    static var optionalString: String?
+    static var dateConstant: Date = Date(timeIntervalSince1970: 0)
+    static var dateNow: Date = Date()
+    static var error: NSError { NSError(domain: string, code: int) }
 }

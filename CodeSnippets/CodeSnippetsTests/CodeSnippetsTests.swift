@@ -17,6 +17,15 @@ final class CodeSnippetsTests: XCTestCase {
         super.tearDown()
     }
     
+    func testGoNuts() {
+        print("\n\nGoing nuts...\n")
+        
+        let myStruct = MyConcreteStruct(string: "hi")
+        print(myStruct.string)
+        
+        print("\nIts over!\n\n\n")
+    }
+    
     func testSerialization() {
         Serialization().test()
     }
