@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "92E9A219-58FA-4080-9284-5357AE1275A6",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:CodeSnippets.xcodeproj",
+      "identifier" : "CAC43EA529E0E79600361458",
+      "name" : "CodeSnippets"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CodeSnippets.xcodeproj",
+        "identifier" : "CAC43EB529E0E79800361458",
+        "name" : "CodeSnippetsTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CodeSnippets.xcodeproj",
+        "identifier" : "CAC43EBF29E0E79800361458",
+        "name" : "CodeSnippetsUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
