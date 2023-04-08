@@ -20,7 +20,7 @@ final class CodeSnippetsTests: XCTestCase {
     func testGoNuts() {
         print("\n\nGoing nuts...\n")
         
-        let myStruct = MyConcreteStruct(string: "hi")
+        let myStruct = MyConcreteStruct(string: "Hello world")
         print(myStruct.string)
         
         print("\nIts over!\n\n\n")
