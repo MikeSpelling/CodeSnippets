@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA77068D29E1535F002F8B8A /* CodeSnippetsTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CodeSnippetsTestPlan.xctestplan; sourceTree = "<group>"; };
 		CAC43EA629E0E79600361458 /* CodeSnippets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeSnippets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC43EA929E0E79600361458 /* CodeSnippetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnippetsApp.swift; sourceTree = "<group>"; };
 		CAC43EAB29E0E79600361458 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		CAF0746B29E0EBA700FCFB08 /* AssociatedTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedTypes.swift; sourceTree = "<group>"; };
 		CAF0746D29E0EBE900FCFB08 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
 		CAF0747029E119C000FCFB08 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		CAF0747229E1321000FCFB08 /* CodeSnippets.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CodeSnippets.xctestplan; sourceTree = "<group>"; };
 		CAF0747529E132AF00FCFB08 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				CAC43EAD29E0E79800361458 /* Assets.xcassets */,
-				CAF0747229E1321000FCFB08 /* CodeSnippets.xctestplan */,
+				CA77068D29E1535F002F8B8A /* CodeSnippetsTestPlan.xctestplan */,
 				CAF0747529E132AF00FCFB08 /* README.md */,
 			);
 			path = Assets;

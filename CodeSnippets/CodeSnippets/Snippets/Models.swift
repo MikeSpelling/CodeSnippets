@@ -52,7 +52,7 @@ struct MyChildStruct: MyChildProtocol {
 }
 
 // MARK: - Struct
-struct MyConcreteStruct {
+struct MyConcreteStruct: Identifiable {
     var uidString: String = MyObject.uidString
     var int: Int = MyObject.int
     var double: Double = MyObject.double
@@ -64,13 +64,15 @@ struct MyConcreteStruct {
     var dateConstant: Date = MyObject.dateConstant
     var dateNow: Date = MyObject.dateNow
     var error: NSError { NSError(domain: string, code: int) }
+    
+    var id: String { uidString }
 }
 struct MyCodableHashableStruct<T: Codable&Hashable>: Codable, Hashable {
     var property: T
 }
 
 // MARK: - Object
-class MyObject: Codable, Hashable, Comparable {
+class MyObject: Codable, Hashable, Comparable, Identifiable {
     var uidString: String
     var int: Int
     var double: Double
@@ -82,6 +84,8 @@ class MyObject: Codable, Hashable, Comparable {
     var dateConstant: Date
     var dateNow: Date
     var error: NSError { NSError(domain: string, code: int) }
+    
+    var id: String { uidString }
     
     init(uidString: String = MyObject.uidString,
          int: Int = MyObject.int,

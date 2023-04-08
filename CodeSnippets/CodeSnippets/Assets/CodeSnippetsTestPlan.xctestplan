@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "0FB6825A-5F8B-455C-AC66-D4244F919E7D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CodeSnippets.xcodeproj",
+        "identifier" : "CAC43EB529E0E79800361458",
+        "name" : "CodeSnippetsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
